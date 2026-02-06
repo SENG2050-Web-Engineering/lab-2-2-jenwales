@@ -34,13 +34,13 @@ public class Main {
 
     // Add a servlet
     tomcat.addServlet("", "HelloWorldServlet", new HelloWorldServlet());
-
     tomcat.addServlet("", "SimpleMessage", new SimpleMessage());
+    tomcat.addServlet("", "GenerateValidHtml", new GenerateValidHtml());
     
     // Map the servlet
     ctx.addServletMappingDecoded("/HelloWorld", "HelloWorldServlet");
-
     ctx.addServletMappingDecoded("/SimpleMessage", "SimpleMessage");
+    ctx.addServletMappingDecoded("/ValidHtml", "GenerateValidHtml");
 
     // Start Tomcat
     try {
